@@ -1,0 +1,149 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    <!-- header -->
+    <div class="row fms-header">
+        <div class="col-xs-12">
+          <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+              <a class="navbar-brand" href="/" title="Front-End Management System">FMS</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-01">
+              <ul class="nav navbar-nav navbar-left">
+                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="right" title="切换导航栏" class="toggle-menu"><em class=fui-list></em><span class="navbar-unread">1</span></a></li>
+                <li><a href="/home">首页</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">常用菜单 <b class="caret"></b></a>
+                  <span class="dropdown-arrow"></span>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">TFS 同步</a></li>
+                    <li><a href="#">项目列表管理</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://frontui.github.io/blog" target="_blank">FED博客</a></li>
+                  </ul>
+                </li>
+                <li><a href="/logout">注销</a></li>
+               </ul>
+               <form class="navbar-form navbar-right" action="#" role="search">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+                    <span class="input-group-btn">
+                      <button type="submit" class="btn"><span class="fui-search"></span></button>
+                    </span>
+                  </div>
+                </div>
+              </form>
+            </div><!-- /.navbar-collapse -->
+          </nav><!-- /navbar -->
+        </div>
+      </div>
+
+    <!-- aside -->
+    <aside class="fms-sider">
+        <ul class="fms-sider-content">
+            <li class="sub-menu">
+                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="right" title="TFS同步">
+                    <em class="fui-loop"></em>
+                    <span>TFS同步</span>
+                    <i class="pull-right fui-arrow-right"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="/">同步 git</a>
+                    </li>
+                    <li>
+                        <a href="/">增加项目</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="right" title="项目列表管理">
+                    <em class="fui-list-columned"></em>
+                    <span>项目列表管理</span>
+                    <i class="pull-right fui-arrow-right"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="/">项目列表</a>
+                    </li>
+                    <li>
+                        <a href="/">增加项目</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="right" title="权限管理">
+                    <em class="fui-user"></em>
+                    <span>权限管理</span>
+                    <i class="pull-right fui-arrow-right"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="/">权限设置</a>
+                    </li>
+                    <li>
+                        <a href="/">用户管理</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+    <section class="wrapper-main-container">
+        <div class="main-content">
+            <div class="page-header">
+                <h3>xxxx</h3>
+            </div>
+            <div class="row row-block">
+                abc
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            ccccc
+
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>sssssssss</th>
+                                        <th>sssssssss</th>
+                                        <th>sssssssss</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>xxxxxx</td>
+                                        <td>xxxxxx</td>
+                                        <td>xxxxxx</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block js %}
+<script>
+    $(function() {
+        $('.toggle-menu').on('click', function() {
+            $('.fms-sider > ul > li').removeClass('active')
+            $('.wrapper-main-container').toggleClass('active');
+        })
+
+        $('.fms-sider > ul > li > a').on('click', function() {
+            $(this).parent().toggleClass('active').siblings().removeClass('active');
+            $('.wrapper-main-container').removeClass('active');
+        })
+    })
+</script>
+{% endblock %}

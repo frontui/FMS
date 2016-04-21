@@ -1,0 +1,39 @@
+{
+  "name": "frontui-fms",
+  "version": "1.0.0",
+  "description": "front-end management system",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js index.js prod",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/frontui/FMS.git"
+  },
+  "keywords": [
+    "frontui"
+  ],
+  "author": "frontui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frontui/FMS/issues"
+  },
+  "homepage": "https://github.com/frontui/FMS#readme",
+  "devDependencies": {
+    "co": "^4.6.0",
+    "co-body": "^4.0.0",
+    "co-monk": "^1.0.0",
+    "co-views": "^2.1.0",
+    "koa": "^1.2.0",
+    "koa-jsonp": "^0.2.0",
+    "koa-logger": "^1.3.0",
+    "koa-route": "^2.4.2",
+    "koa-session": "^3.3.1",
+    "koa-static": "^2.0.0",
+    "monk": "^1.0.1",
+    "nodemon": "^1.9.1",
+    "swig": "^1.4.2",
+    "yamljs": "^0.2.7"
+  }
+}

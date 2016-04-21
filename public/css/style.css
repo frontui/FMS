@@ -1,0 +1,129 @@
+/**
+ * 样式
+ */
+html,body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.fms-header .navbar,
+.fms-header .navbar-embossed > .navbar-collapse{
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.fms-sider {
+    position: absolute;
+    padding: 0;
+    top: 53px;
+    bottom: 0;
+    width: 240px;
+    color: #fff;
+    background: #1ABC9C;
+    z-index: 200;
+    overflow: hidden;
+}
+
+.fms-sider a {
+    color: #fff;
+}
+
+.fms-sider ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fms-sider > ul > li {
+    height: 42px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+.fms-sider > ul > li.active {
+    height: auto;
+}
+
+.fms-sider > ul > li a em {
+    margin-right: 10px;
+}
+
+.fms-sider > ul > li > a {
+    position: relative;
+    z-index: 5;
+    padding: 5px 15px;
+    display: block;
+    background: #16A085;
+}
+
+.fms-sider > ul > li > ul {
+    position: relative;
+    z-index: 4;
+    padding-left: 43px;
+    font-size: 16px;
+    /*display: none;*/
+    /*height: 0;*/
+
+    opacity: 0;
+    visibility: hidden;
+    /*overflow: hidden;*/
+    transform: translateY(-100%);
+
+    transition: all .3s ease-out;
+}
+
+.fms-sider > ul > li.active > ul {
+    /*display: block;*/
+    opacity: 1;
+    visibility: visible;
+    /*height: auto;*/
+    transform: translateY(0)
+}
+
+.fms-sider > ul > li > ul > li {
+    padding: 5px 0;
+}
+
+.wrapper-main-container {
+    position: absolute;
+    top: 53px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: 240px;
+    z-index: 1000;
+    overflow: hidden;
+    background: #f1f2f7;
+
+    transition: margin .3s;
+}
+.wrapper-main-container.active {
+    margin-left: 45px;
+}
+
+.wrapper-main-container .page-header {
+    margin: 0;
+    padding: 0 18px;
+    height: 36px;
+    border-bottom: none;
+}
+
+.wrapper-main-container .page-header h3 {
+    float: left;
+    margin-top: 3px;
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+.wrapper-main-container .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.wrapper-main-container .row-block {
+    margin: 20px 0 0 20px;
+}
+
+.main-content {
+    padding: 15px 0 0;
+}
